@@ -3,8 +3,8 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                def mvnHome = tool 'M3'
-                bat "${mvnHome}\\bin\\mvn clean PipelineAsCode"
+              
+                bat "mvn clean PipelineAsCode"
             }
             post {
                 success {
