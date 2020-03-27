@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                bat "mvn clean PipelineAsCode"
+                cmd_exec( "mvn clean PipelineAsCode")
             }
             post {
                 success {
