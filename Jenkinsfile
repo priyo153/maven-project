@@ -1,9 +1,12 @@
 pipeline {
     agent any
+     tools {
+        maven 'localMaven'
+    }
     stages{
         stage('Build'){
             steps {
-                bat "mvnw clean PipelineAsCode"
+                bat "mvn clean PipelineAsCode"
             }
             post {
                 success {
